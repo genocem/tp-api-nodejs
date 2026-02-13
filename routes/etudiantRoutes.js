@@ -9,7 +9,8 @@ const {
     createEtudiant,
     updateEtudiant,
     deleteEtudiant,
-    getEtudiantsByFiliere
+    getEtudiantsByFiliere,
+    getEtudiantsSorted
 } = require('../controllers/etudiantController');
 
 // ============================================
@@ -38,3 +39,6 @@ router.route('/:id')
 
 // Exporter le routeur
 module.exports = router;
+
+router.route('/getedudiantsorted').get(getEtudiantsSorted)
+
