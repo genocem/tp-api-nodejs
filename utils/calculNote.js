@@ -14,7 +14,7 @@ function isValidMoyenne(valeur) {
 }
 
 function calculMention(moyenne) {
-    if (moyenne >= 16) return 'Excellent';
+    if (moyenne >= 16) return 'Très Bien';
     if (moyenne >= 14) return 'Bien';
     if (moyenne >= 12) return 'Assez Bien';
     if (moyenne >= 10) return 'Passable';
