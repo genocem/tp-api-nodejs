@@ -15,7 +15,7 @@ jobs:
     # ============================================
     strategy:
       matrix:
-        node-version: [18, 20, 22]
+        node-version: [24, 20, 22]
       # fail-fast: false → si une version échoue,
       # les autres continuent quand même
       fail-fast: false
@@ -37,4 +37,4 @@ jobs:
         run: npm ci
 
       - name: 🧪 Lancer les tests
-        run: npm test
+        run: npm test 
