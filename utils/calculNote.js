@@ -14,6 +14,14 @@ function isValidMoyenne(valeur) {
 }
 
 function calculMention(moyenne) {
+    if (typeof moyenne !== 'number' || isNaN(moyenne)) {
+        throw new Error('La moyenne doit être un nombre');
+    }
+
+    if (moyenne < 0 || moyenne > 20) {
+        throw new Error('La moyenne doit être comprise entre 0 et 20');
+    }
+
     if (moyenne >= 16) return 'Très Bien';
     if (moyenne >= 14) return 'Bien';
     if (moyenne >= 12) return 'Assez Bien';
